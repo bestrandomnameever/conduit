@@ -7,6 +7,8 @@ let componentsModule = angular.module('app.components', []);
  componentsModule.component('listErrors', ListErrors);
  import ShowAuthed from './show-authed.directive';
  componentsModule.directive('showAuthed', ShowAuthed);
+ import FollowBtn from './buttons/follow-btn.component.js'
+ componentsModule.component('followBtn', FollowBtn);
 
 
 export default componentsModule;

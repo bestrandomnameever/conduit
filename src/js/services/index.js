@@ -6,9 +6,9 @@ let servicesModule = angular.module('app.services', []);
 // services
 import UserService from './user.service';
 servicesModule.service('User', UserService);
-import JwtService from './jwt.service'
+import JwtService from './jwt.service';
 servicesModule.service('JWT', JwtService);
-
-
+import ProfileService from './profile.service';
+servicesModule.service('Profile',ProfileService);
 
 export default servicesModule;
