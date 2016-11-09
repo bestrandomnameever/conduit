@@ -4,17 +4,9 @@
   <div class="banner">
     <div class="container">
 
-      <h1>Example article title</h1>
+      <h1 ng-bind="::$ctrl.article.title"></h1>
 
-      <div class="article-meta">
-        <!-- Show author info + favorite & follow buttons -->
-        <div class="article-meta">
-          <a href=""><img /></a>
-          <div class="info">
-            <a href="" class="author">Brad Green</a>
-            <span class="date">January 20th</span>
-          </div>
-
+      <article-meta article="$ctrl.article">
           <button class="btn btn-sm btn-outline-secondary">
             <i class="ion-plus-round"></i>
             &nbsp;
@@ -26,8 +18,7 @@
             &nbsp;
             Favorite Article <span class="counter">(29)</span>
           </button>
-        </div>
-      </div>
+        </article-meta>
 
     </div>
   </div>
@@ -42,16 +33,11 @@
       <div class="col-xs-12">
 
         <div>
-          <p>This is the content of our article.</p>
+          <div ng-bind-html="::$ctrl.article.body"></div>
         </div>
 
         <ul class="tag-list">
-          <li class="tag-default tag-pill tag-outline">
-            Tag One
-          </li>
-          <li class="tag-default tag-pill tag-outline">
-            Tag Two
-          </li>
+          <li class="tag-default tag-pill tag-outline" ng-repeat="tag in ::$ctrl.article.tagList">{{tag}}</li>
         </ul>
 
       </div>
@@ -62,13 +48,7 @@
     <div class="article-actions">
 
       <!-- Show author info + favorite & follow buttons -->
-      <div class="article-meta">
-        <a href=""><img /></a>
-        <div class="info">
-          <a href="" class="author">Brad Green</a>
-          <span class="date">January 20th</span>
-        </div>
-
+        <article-meta article="$ctrl.article">
         <button class="btn btn-sm btn-outline-secondary">
           <i class="ion-plus-round"></i>
           &nbsp;
@@ -80,7 +60,7 @@
           &nbsp;
           Favorite Article <span class="counter">(29)</span>
         </button>
-      </div>
+      </article-meta>
 
     </div>
 
