@@ -14,5 +14,7 @@ import ArticlesService from './articles.service';
 servicesModule.service('Articles', ArticlesService);
 import Comments from './comments.service';
 servicesModule.service('Comments', Comments);
+import Tags from './tags.service.js';
+servicesModule.service('Tags', Tags);
 
 export default servicesModule;
